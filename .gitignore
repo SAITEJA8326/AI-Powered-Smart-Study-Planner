@@ -33,13 +33,6 @@ student.db
 dataset/*.xlsx
 dataset/*.csv
 
-# Model Files
-models/saved_models/
-*.h5
-*.pkl
-*.joblib
-*.pt
-*.pth
 
 # Logs
 *.log
