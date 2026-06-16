@@ -30,7 +30,6 @@ Thumbs.db
 student.db
 
 # Excel Datasets (optional if large/private)
-dataset/*.xlsx
 dataset/*.csv
 
 
