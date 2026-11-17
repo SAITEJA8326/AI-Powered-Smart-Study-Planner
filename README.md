@@ -6,7 +6,7 @@
 
 The diagram below shows the Streamlit interfaces, SQLite persistence, analytics and scheduling utilities, and the separate model-training workflow.
 
-![AI-Powered Smart Study Planner Architecture](docs/architecture.svg)
+![AI-Powered Smart Study Planner Architecture](docs/arch.png)
 
 
 ---
