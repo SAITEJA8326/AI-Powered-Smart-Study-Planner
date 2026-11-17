@@ -1,76 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1360" viewBox="0 0 1800 1360">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320">
 <defs>
-  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#8090b2"/></marker>
-  <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#66a6ff"/></marker>
-  <style>
-    .bg{fill:#0e1220}.title{font:700 39px 'Segoe UI',Arial;fill:#eef2ff}.sub{font:18px 'Segoe UI',Arial;fill:#aab5d1}
-    .panel{fill:#1a2238;stroke:#34415f;stroke-width:2}.pt{font:700 21px 'Segoe UI',Arial;fill:#eef2ff}
-    .n{stroke-width:2;rx:16}.nt{font:700 19px 'Segoe UI',Arial;fill:#eef2ff;text-anchor:middle}.ns{font:15px 'Segoe UI',Arial;fill:#c5cce0;text-anchor:middle}
-    .edge{fill:none;stroke:#8090b2;stroke-width:2.6;marker-end:url(#arr)}.edgeblue{fill:none;stroke:#66a6ff;stroke-width:2.8;marker-end:url(#arrBlue)}
-    .lab{font:14px 'Segoe UI',Arial;fill:#dce4fa;text-anchor:middle}
-    .foot{font:14px 'Segoe UI',Arial;fill:#aab5d1}
-  </style>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#05070d"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+ <linearGradient id="cyan" x2="1" y2="1"><stop stop-color="#0b2941"/><stop offset="1" stop-color="#102039"/></linearGradient>
+ <linearGradient id="violet" x2="1" y2="1"><stop stop-color="#241437"/><stop offset="1" stop-color="#171a35"/></linearGradient>
+ <linearGradient id="green" x2="1" y2="1"><stop stop-color="#092f2c"/><stop offset="1" stop-color="#102b32"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <marker id="aC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3Z" fill="#39c9ff"/></marker>
+ <marker id="aP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3Z" fill="#c58cff"/></marker>
+ <marker id="aG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3Z" fill="#38e6ad"/></marker>
+ <style>
+ .h{font:700 35px 'Segoe UI',Arial;fill:#f3f6ff}.sub{font:17px 'Segoe UI',Arial;fill:#9daecb}
+ .panel{fill:#0c1322;stroke:#263854;stroke-width:2}.pt{font:700 21px 'Segoe UI',Arial;fill:#dfeaff;letter-spacing:1px}
+ .node{stroke-width:2;rx:15}.nt{font:700 18px 'Segoe UI',Arial;fill:#f5f7ff;text-anchor:middle}.ns{font:14px 'Segoe UI',Arial;fill:#bdcbe0;text-anchor:middle}
+ .edgeC{fill:none;stroke:#39c9ff;stroke-width:2.8;marker-end:url(#aC)}.edgeP{fill:none;stroke:#c58cff;stroke-width:2.8;stroke-dasharray:9 7;marker-end:url(#aP)}.edgeG{fill:none;stroke:#38e6ad;stroke-width:2.8;marker-end:url(#aG)}
+ .label{font:13px 'Segoe UI',Arial;fill:#d5e2f8;text-anchor:middle}.tiny{font:13px 'Segoe UI',Arial;fill:#9fb0cb}
+ .ico{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+ .tag{font:700 14px 'Segoe UI',Arial;fill:#eaf2ff}
+ </style>
 </defs>
-<rect class="bg" width="1800" height="1360"/>
-<text class="title" x="64" y="65">AI-POWERED SMART STUDY PLANNER</text>
-<text class="sub" x="66" y="102">Application architecture • academic tracking • deep-learning insights • adaptive study planning</text>
-
-<!-- student -->
-<rect x="720" y="135" width="360" height="62" rx="31" fill="#30264b" stroke="#b69cff" stroke-width="2"/>
-<text class="nt" x="900" y="173">STUDENT / LEARNER</text>
-
-<!-- UI layer -->
-<rect class="panel" x="70" y="235" width="1660" height="230" rx="22"/>
-<text class="pt" x="98" y="271">01  ·  STUDENT INTERFACE — STREAMLIT</text>
-<rect class="n" x="145" y="315" width="440" height="105" fill="#172d4b" stroke="#66a6ff"/>
-<text class="nt" x="365" y="354">Main dashboard</text><text class="ns" x="365" y="384">app/main.py · login + Progress / AI / Schedule tabs</text>
-<rect class="n" x="680" y="315" width="440" height="105" fill="#172d4b" stroke="#66a6ff"/>
-<text class="nt" x="900" y="354">Performance tracker</text><text class="ns" x="900" y="384">app/app_streamlit.py</text>
-<rect class="n" x="1215" y="315" width="440" height="105" fill="#172d4b" stroke="#66a6ff"/>
-<text class="nt" x="1435" y="354">Alternate portal UI</text><text class="ns" x="1435" y="384">app/ui.py</text>
-<path class="edge" d="M900 197 V225 H365 V315"/><path class="edge" d="M900 225 V315"/><path class="edge" d="M900 225 H1435 V315"/>
-<text class="lab" x="900" y="218">uses</text>
-
+<rect width="1800" height="1320" fill="url(#bg)"/>
+<path d="M0 160H1800M0 1290H1800" stroke="#14243a" stroke-width="1"/>
+<text class="h" x="58" y="62">AI-POWERED SMART STUDY PLANNER</text>
+<text class="sub" x="60" y="94">SYSTEM ARCHITECTURE  /  PERSONALIZED ACADEMIC ANALYTICS  /  DEEP LEARNING</text>
+<g transform="translate(60 115)" color="#55d6ff">
+ <path d="M0 17L38 0L76 17L38 34Z" fill="#1688d5" stroke="#63ddff" stroke-width="2"/><path d="M13 24V42Q38 58 63 42V24" fill="none" stroke="#63ddff" stroke-width="3"/><path d="M72 18V39" stroke="#63ddff" stroke-width="3"/>
+ <text x="95" y="26" class="sub">Student performance → insights → adaptive weekly plan</text>
+</g>
+<!-- Student -->
+<rect x="735" y="120" width="330" height="64" rx="32" fill="url(#violet)" stroke="#c58cff" stroke-width="2.5"/>
+<g transform="translate(770 137)" color="#c58cff"><circle cx="17" cy="11" r="9" fill="#c58cff"/><path d="M1 38Q2 22 17 22Q32 22 33 38Z" fill="#c58cff"/></g>
+<text class="nt" x="930" y="160">STUDENT</text>
+<path class="edgeP" d="M900 184V225"/>
+<!-- interface panel -->
+<rect class="panel" x="400" y="225" width="1380" height="220" rx="22"/>
+<text class="pt" x="430" y="263">01  /  STUDENT INTERFACE  ·  STREAMLIT</text>
+<!-- dashboard -->
+<rect class="node" x="455" y="290" width="550" height="120" fill="url(#cyan)" stroke="#39c9ff"/>
+<g transform="translate(485 318)" color="#39c9ff"><rect x="0" y="0" width="38" height="27" rx="3" class="ico"/><path d="M-5 34H43M19 27V34" class="ico"/></g>
+<text class="nt" x="740" y="330">MAIN DASHBOARD</text><text class="ns" x="740" y="357">app/main.py  ·  Login / Register</text>
+<g transform="translate(500 375)"><rect width="105" height="24" rx="12" fill="#143d55"/><text class="tag" x="52" y="17" text-anchor="middle">Add Week</text><rect x="115" width="105" height="24" rx="12" fill="#143d55"/><text class="tag" x="167" y="17" text-anchor="middle">Progress</text><rect x="230" width="105" height="24" rx="12" fill="#143d55"/><text class="tag" x="282" y="17" text-anchor="middle">AI Insights</text><rect x="345" width="105" height="24" rx="12" fill="#143d55"/><text class="tag" x="397" y="17" text-anchor="middle">Schedule</text></g>
+<rect class="node" x="1050" y="290" width="310" height="120" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(1080 320)" color="#c58cff"><path d="M0 9L24 0L48 9L24 18Z" fill="#c58cff"/><path d="M7 14V29Q24 40 41 29V14" fill="none" stroke="#c58cff" stroke-width="3"/></g>
+<text class="nt" x="1210" y="348">PERFORMANCE TRACKER</text><text class="ns" x="1210" y="376">app/app_streamlit.py</text>
+<rect class="node" x="1400" y="290" width="330" height="120" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(1435 319)" color="#c58cff"><rect x="0" y="0" width="36" height="36" rx="5" class="ico"/><path d="M8 12H28M8 20H28M8 28H22" class="ico"/></g>
+<text class="nt" x="1570" y="348">ALTERNATE PORTAL UI</text><text class="ns" x="1570" y="376">app/ui.py</text>
 <!-- services -->
-<rect class="panel" x="70" y="535" width="1060" height="300" rx="22"/>
-<text class="pt" x="98" y="572">02  ·  APPLICATION SERVICES — utils/</text>
-<rect class="n" x="115" y="630" width="285" height="125" fill="#123b3a" stroke="#46d7c5"/>
-<text class="nt" x="257" y="675">Academic analysis</text><text class="ns" x="257" y="707">analysis.py · weak / strong</text><text class="ns" x="257" y="729">topic + performance level</text>
-<rect class="n" x="455" y="630" width="285" height="125" fill="#123b3a" stroke="#46d7c5"/>
-<text class="nt" x="597" y="675">Smart schedule</text><text class="ns" x="597" y="707">schedule.py · 7-day plan</text><text class="ns" x="597" y="729">topic-focused study blocks</text>
-<rect class="n" x="795" y="630" width="285" height="125" fill="#123b3a" stroke="#46d7c5"/>
-<text class="nt" x="937" y="675">DL inference</text><text class="ns" x="937" y="707">engine_dl.py</text><text class="ns" x="937" y="729">NN prediction + AE reconstruction</text>
-<path class="edgeblue" d="M365 420 V490 H257 V630"/><path class="edgeblue" d="M365 490 H597 V630"/><path class="edgeblue" d="M900 420 V490 H937 V630"/>
-<path class="edgeblue" d="M1435 420 V490 H597 V630"/>
-<text class="lab" x="257" y="515">analyzes scores</text><text class="lab" x="597" y="515">requests study plan</text><text class="lab" x="937" y="515">requests model insights</text>
-
-<!-- database -->
-<rect class="panel" x="1240" y="535" width="490" height="300" rx="22"/>
-<text class="pt" x="1268" y="572">03  ·  PERSISTENCE</text>
-<rect class="n" x="1305" y="640" width="360" height="115" fill="#49321f" stroke="#ffb86b"/>
-<text class="nt" x="1485" y="682">SQLite database</text><text class="ns" x="1485" y="714">student.db · users + weekly records</text>
-<path class="edge" d="M365 420 V500 H1485 V640"/><path class="edge" d="M900 420 V515 H1540 V640"/>
-<text class="lab" x="1480" y="545">read / write</text>
-
-<!-- offline training -->
-<rect class="panel" x="70" y="910" width="1660" height="380" rx="22"/>
-<text class="pt" x="98" y="948">04  ·  OFFLINE DATA &amp; MODEL TRAINING</text>
-<rect class="n" x="120" y="1030" width="310" height="135" fill="#30264b" stroke="#b69cff"/>
-<text class="nt" x="275" y="1075">Student dataset</text><text class="ns" x="275" y="1107">dataset/student_dataset_25000 (1).xlsx</text>
-<rect class="n" x="520" y="1030" width="330" height="135" fill="#30264b" stroke="#b69cff"/>
-<text class="nt" x="685" y="1075">Preprocessing</text><text class="ns" x="685" y="1107">utils/preprocessing.py</text><text class="ns" x="685" y="1130">feature engineering + scaling</text>
-<rect class="n" x="945" y="990" width="325" height="105" fill="#482234" stroke="#ff7d9a"/>
-<text class="nt" x="1107" y="1032">Neural network training</text><text class="ns" x="1107" y="1060">train_models.py / train_nn.py</text>
-<rect class="n" x="945" y="1140" width="325" height="105" fill="#482234" stroke="#ff7d9a"/>
-<text class="nt" x="1107" y="1182">Autoencoder training</text><text class="ns" x="1107" y="1210">train_models.py / train_autoencoder.py</text>
-<rect class="n" x="1360" y="990" width="300" height="105" fill="#482234" stroke="#ff7d9a"/>
-<text class="nt" x="1510" y="1032">LSTM trainer</text><text class="ns" x="1510" y="1060">train_lstm.py · separate workflow</text>
-<rect class="n" x="1360" y="1140" width="300" height="105" fill="#49321f" stroke="#ffb86b"/>
-<text class="nt" x="1510" y="1182">Saved models</text><text class="ns" x="1510" y="1210">nn_model.h5 · autoencoder.h5</text>
-<path class="edge" d="M430 1097 H520"/><path class="edge" d="M850 1097 H900 V1042 H945"/><path class="edge" d="M900 1097 V1192 H945"/>
-<path class="edge" d="M850 1097 H900 V1042 H1360"/>
-<path class="edge" d="M1270 1042 H1315 V1192 H1360"/><path class="edge" d="M1270 1192 H1360"/>
-<path class="edge" d="M937 755 V875 H1510 V1140"/>
-<text class="lab" x="475" y="1085">loads data</text><text class="lab" x="900" y="1015">features</text><text class="lab" x="1320" y="1115">saves weights</text><text class="lab" x="1185" y="865">inference loads saved NN + AE</text>
-<text class="foot" x="98" y="1268">Note: the LSTM trainer is present as a standalone training script; current dashboard inference uses the saved neural network and autoencoder.</text>
+<rect class="panel" x="400" y="510" width="1380" height="270" rx="22"/>
+<text class="pt" x="430" y="548">02  /  APPLICATION SERVICES  ·  utils/</text>
+<rect class="node" x="455" y="590" width="365" height="145" fill="url(#cyan)" stroke="#39c9ff"/>
+<g transform="translate(485 618)" color="#39c9ff"><path d="M0 36V5M14 36V20M28 36V0M42 36V12" class="ico"/></g>
+<text class="nt" x="640" y="635">ANALYSIS SERVICE</text><text class="ns" x="640" y="665">analysis.py · weak / strong topics</text><text class="ns" x="640" y="690">average score + performance level</text>
+<rect class="node" x="900" y="590" width="365" height="145" fill="url(#green)" stroke="#38e6ad"/>
+<g transform="translate(930 618)" color="#38e6ad"><rect x="0" y="4" width="42" height="37" rx="4" class="ico"/><path d="M0 15H42M12 0V9M30 0V9M12 23H19M25 23H32M12 31H19" class="ico"/></g>
+<text class="nt" x="1085" y="635">SMART SCHEDULE</text><text class="ns" x="1085" y="665">schedule.py · personalized 7-day plan</text><text class="ns" x="1085" y="690">weak-topic prioritization + revision</text>
+<rect class="node" x="1345" y="590" width="385" height="145" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(1375 617)" color="#c58cff"><path d="M21 0C9 0 6 10 10 17C-1 25 7 39 18 37C24 47 39 40 36 30C48 20 39 8 30 10C29 3 25 0 21 0Z" class="ico"/><path d="M21 5V38M12 15L21 20L30 14M13 29L21 25L31 30" class="ico"/></g>
+<text class="nt" x="1545" y="635">DL INFERENCE ENGINE</text><text class="ns" x="1545" y="665">engine_dl.py · loads saved NN + AE</text><text class="ns" x="1545" y="690">score prediction + reconstruction MSE</text>
+<path class="edgeC" d="M740 410V480H640V590"/><path class="edgeC" d="M1210 410V475H1085V590"/><path class="edgeC" d="M1570 410V470H1540V590"/>
+<path class="edgeG" d="M1540 590V565H1690V475H740V410"/>
+<!-- db -->
+<rect class="panel" x="55" y="510" width="290" height="270" rx="22"/>
+<text class="pt" x="82" y="548">03  /  DATA STORE</text>
+<g transform="translate(125 580)" color="#ffbd69"><ellipse cx="70" cy="15" rx="70" ry="16" fill="#382817" stroke="#ffbd69" stroke-width="2.5"/><path d="M0 15V115C0 135 140 135 140 115V15M0 60C0 80 140 80 140 60" fill="#382817" stroke="#ffbd69" stroke-width="2.5"/><ellipse cx="70" cy="15" rx="70" ry="16" fill="#51371e" stroke="#ffbd69" stroke-width="2.5"/></g>
+<text class="nt" x="195" y="735">SQLite · student.db</text><text class="ns" x="195" y="758">users + weekly topic records</text>
+<path class="edgeC" d="M455 665H345"/>
+<path class="edgeC" d="M345 710H455"/>
+<text class="label" x="395" y="652">read / write</text>
+<!-- training panel -->
+<rect class="panel" x="55" y="850" width="1725" height="410" rx="22"/>
+<text class="pt" x="85" y="890">04  /  OFFLINE DATA &amp; MODEL TRAINING</text>
+<!-- dataset -->
+<rect class="node" x="95" y="950" width="320" height="180" fill="#122d22" stroke="#45d483"/>
+<g transform="translate(125 985)"><rect width="58" height="70" rx="5" fill="#147b4b"/><path d="M38 0V20H58" fill="none" stroke="#a4f2c3" stroke-width="3"/><path d="M12 28H46M12 40H46M12 52H46" stroke="#d9ffe8" stroke-width="3"/></g>
+<text class="nt" x="295" y="1005">STUDENT DATASET</text><text class="ns" x="295" y="1035">student_dataset_25000</text><text class="ns" x="295" y="1058">(1).xlsx</text><text class="ns" x="255" y="1098">weekly marks + study metrics</text>
+<!-- preprocessing -->
+<rect class="node" x="500" y="950" width="330" height="180" fill="url(#cyan)" stroke="#39c9ff"/>
+<g transform="translate(530 980)" color="#39c9ff"><path d="M0 0H44M8 12H36M15 24H29M21 36V48" class="ico"/></g>
+<text class="nt" x="685" y="1005">PREPROCESSING</text><text class="ns" x="685" y="1035">utils/preprocessing.py</text><text class="ns" x="685" y="1062">column cleanup · feature engineering</text><text class="ns" x="685" y="1085">MinMax scaling · subtopic extraction</text>
+<!-- models -->
+<rect class="node" x="930" y="930" width="350" height="115" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(960 955)" color="#c58cff"><path d="M0 25L15 0L30 25L45 0" class="ico"/><path d="M0 38H45" class="ico"/></g>
+<text class="nt" x="1110" y="975">NEURAL NETWORK TRAINER</text><text class="ns" x="1110" y="1004">train_nn.py / train_models.py</text>
+<rect class="node" x="930" y="1080" width="350" height="115" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(960 1105)" color="#c58cff"><circle cx="22" cy="22" r="21" class="ico"/><path d="M10 22Q22 4 34 22Q22 40 10 22Z" class="ico"/></g>
+<text class="nt" x="1110" y="1125">AUTOENCODER TRAINER</text><text class="ns" x="1110" y="1154">train_autoencoder.py / train_models.py</text>
+<rect class="node" x="930" y="1210" width="350" height="35" fill="#171326" stroke="#c58cff" stroke-dasharray="6 5"/>
+<text class="ns" x="1105" y="1233">LSTM trainer · train_lstm.py (standalone)</text>
+<!-- model artifacts -->
+<rect class="node" x="1390" y="950" width="340" height="245" fill="url(#violet)" stroke="#c58cff"/>
+<g transform="translate(1420 980)" color="#c58cff"><path d="M0 8L18 0L36 8V34L18 42L0 34Z" class="ico"/><path d="M0 8L18 17L36 8M18 17V42" class="ico"/></g>
+<text class="nt" x="1575" y="1007">SAVED MODEL ARTIFACTS</text>
+<rect x="1430" y="1040" width="260" height="55" rx="10" fill="#0a1728" stroke="#657da5"/>
+<text class="nt" x="1560" y="1064">nn_model.h5</text><text class="ns" x="1560" y="1084">score prediction</text>
+<rect x="1430" y="1110" width="260" height="55" rx="10" fill="#0a1728" stroke="#657da5"/>
+<text class="nt" x="1560" y="1134">autoencoder.h5</text><text class="ns" x="1560" y="1154">reconstruction / MSE</text>
+<!-- training edges -->
+<path class="edgeC" d="M415 1040H500"/><path class="edgeC" d="M830 1040H875V987H930"/><path class="edgeC" d="M875 1040V1137H930"/>
+<path class="edgeP" d="M1280 987H1340V1067H1390"/><path class="edgeP" d="M1280 1137H1340V1137H1390"/>
+<path class="edgeP" d="M1560 950V810H1540V735"/>
+<text class="label" x="455" y="1027">loads data</text><text class="label" x="875" y="968">features</text><text class="label" x="1335" y="1035">saves weights</text><text class="label" x="1630" y="830">inference loads</text>
+<!-- legend -->
+<g transform="translate(90 1190)"><path d="M0 0H60" stroke="#39c9ff" stroke-width="3" marker-end="url(#aC)"/><text class="tiny" x="72" y="5">Live application / data flow</text><path d="M270 0H330" stroke="#c58cff" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#aP)"/><text class="tiny" x="342" y="5">Offline training / model artifacts</text><text class="tiny" x="700" y="5">Current dashboard inference uses NN + Autoencoder; LSTM trainer is standalone.</text></g>
 </svg>
