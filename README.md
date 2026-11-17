@@ -2,6 +2,13 @@
 
 > A Deep Learning-based Student Performance Tracking System that analyzes weekly academic progress, identifies weak topics, visualizes performance trends, and generates personalized study plans.
 
+## 🏗️ System Architecture
+
+The diagram below shows the Streamlit interfaces, SQLite persistence, analytics and scheduling utilities, and the separate model-training workflow.
+
+![AI-Powered Smart Study Planner Architecture](docs/architecture.svg)
+
+
 ---
 
 ## 🚀 Project Overview
